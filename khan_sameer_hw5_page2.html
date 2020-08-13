@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="em">
+<head>
+    <meta charset="utf-8">
+    <title>Get Volume of a Box</title>
+    </head>
+    <body>
+    <header>
+        <h1>Get Volume of a Box</h1>
+        <img src="calculator.png" alt="calculator" width ="150"; height="150">
+        </header>
+        
+        <main>
+        <form id="volumeForm">
+            <p><label for="enterTheLength">Enter the Length: </label>
+                <input type="text" id="txtLength"></p>
+                
+            <p><label for="enterTheWidth">Enter the Width: </label>
+                <input type="text" id="txtWidth"></p>
+                
+            <p><label for="enterTheHeight">Enter the Height: </label>
+                <input type="text" id="txtHeight"></p>
+                
+            <p><input type="button" value="Get Volume!" onclick="volume()"></p>
+            
+            </form>
+            
+            <div id="results"></div> <!-- End of results div -->
+            
+            <script>
+                
+            function volume() {
+                var volume, length, width, height
+                
+                length = document.getElementById("txtLength").value;
+                
+                width = document.getElementById("txtWidth").value;
+                
+                height = document.getElementById("txtHeight").value;
+                
+                volume = length * width * height;
+                
+                document.getElementById("results").innerHTML = volume;
+                
+            }
+            </script>
+            
+            <style>
+                header {
+                    color: #90EE90;
+                }
+                main {
+                    color: #FF0000
+                }
+            </style>
+            
+        </main>
+    </body>
+</html>

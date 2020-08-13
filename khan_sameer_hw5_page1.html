@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <title>Convert Pounds to Grams</title>
+    </head>
+    
+<body>
+    <h1>Convert Pounds to Grams</h1>
+    
+    <form id="poundsToGrams">
+        <p><label for="convertPoundsToGrams"> Enter Pounds Amount: </label> 
+        <input type="text" id="txtPounds">
+        <input type="button" value="Convert Pounds to Grams" onclick="poundsToGrams()"></p>
+    </form>
+    
+    <div id="results" font-family="Arial"></div> <!-- End of results div -->
+    
+    <script>
+    function poundsToGrams() {
+        var pounds, grams
+        pounds = document.getElementById("txtPounds").value;
+        grams = pounds*453.59;
+        
+        document.getElementById("results").innerHTML = grams;
+    }
+    </script>
+    
+    </body> 
+</html>
